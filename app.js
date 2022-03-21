@@ -40,4 +40,68 @@ console.log(arr);
 arr.pop();
 console.log(arr);
 
+//!section2
+//!cau1
+function sumTriple(x, y) {
+  if (x == y) {
+    return 3 * (x + y);
+  } 
+  else{
+  return (x + y);
+  }
+}
+console.log(sumTriple(5, 5));
 
+//!cau2
+function diff_num(n) {
+  if (n <= 19) {
+    return (19 - n);
+  }
+  else{
+    return (n - 19) * 3;
+  }
+}
+
+console.log(diff_num(13));
+console.log(diff_num(19));
+console.log(diff_num(20));
+
+//! cau 3
+
+function test(str) {
+  var arr = new Array(); 
+  for (var i = 0; i < str.length; i++) {
+    if (i != 0 && str[i] == "*")
+      {
+        for (var j = 0; j <= 9; j++) {
+          a = str.substring(0, i) + j.toString() + str.substring(i + 1, str.length);       
+          if (a % 3 == 0) {
+            arr.push(a);
+          }
+        }
+      }   
+  }
+  return arr;
+}
+var a = '1*9';
+var b = test(a);
+console.log(b);
+//! cau 4
+function test2(str) {
+  var arr = new Array(); 
+  for (var i = 0; i < str.length; i++) {
+    if (i != 0 && str[i] == "*")
+      {
+        for (var j = 0; j <= 9; j++) {
+          a = str.substring(0, i) + j.toString() + str.substring(i + 1, str.length);       
+          if (a % 6 == 0) {
+            arr.push(a);
+          }
+        }
+      }   
+  }
+  return arr;
+}
+var a = '1234567890*';
+var b = test2(a);
+console.log(b);
